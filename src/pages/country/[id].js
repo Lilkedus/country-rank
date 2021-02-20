@@ -24,7 +24,7 @@ const Country = ({ country }) => {
 
   return (
     <Layout title={country.name}>
-      <div className={styles.container}>
+      <div layoutId="animate" className={styles.container}>
         <div className={styles.container_left}>
           <div className={styles.overview_panel}>
             <img src={country.flag} alt={country.name} />
@@ -113,7 +113,6 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-  // const res = await fetch(`http://restcountries.eu/rest/v2/alpha/${params.id}`);
   const country = await getCountry(params.id);
 
   return {
