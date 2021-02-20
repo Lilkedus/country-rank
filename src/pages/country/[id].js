@@ -24,7 +24,7 @@ const Country = ({ country }) => {
 
   return (
     <Layout title={country.name}>
-      <div layoutId="animate" className={styles.container}>
+      <div className={styles.container}>
         <div className={styles.container_left}>
           <div className={styles.overview_panel}>
             <img src={country.flag} alt={country.name} />
