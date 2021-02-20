@@ -13,9 +13,9 @@ const Country = ({ country }) => {
   const [borders, setBorders] = useState([]);
 
   const getBorders = async () => {
-    const borders = await Promise.all(country.borders.map(border => getCountry(border)));
+    const bordersCountry = await Promise.all(country.borders.map(border => getCountry(border)));
 
-    setBorders(borders);
+    setBorders(bordersCountry);
   }
 
   useEffect(() => {
