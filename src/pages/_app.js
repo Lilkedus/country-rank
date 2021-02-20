@@ -6,11 +6,9 @@ function MyApp({ Component, pageProps, router }) {
     <AnimatePresence>
       <motion.div key={router.route} initial="pageInitial" animate="pageAnimate" exit="pageExit" variants={{
         pageInitial: {
-          opacity: 0,
           scale: 0.9
         },
         pageAnimate: {
-          opacity: 1,
           scale: 1
         }
       }}>
